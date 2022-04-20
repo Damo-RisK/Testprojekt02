@@ -1,7 +1,26 @@
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        System.out.println("Das ist ein Test der IDE!");
-        System.out.println("Oh nein eine Änderung!");
+
+        ByTwos byTwos = new ByTwos();
+        byThrees byThreesobj = new byThrees();
+
+        Series ob;
+
+        for (int i = 0; i < 6; i++) {
+
+            ob = byTwos;
+            System.out.println("ByTwos: " + ob.getNext());
+
+            ob = byThreesobj;
+            System.out.println("ByThrees: " + ob.getNext());
+        }
+        //Static Methods in Interfaces can only be called by the Interface!
+        byTwos.printStuff();
+        byThreesobj.printStuff();
+
+        byTwos.printStuff();
     }
+
 }
